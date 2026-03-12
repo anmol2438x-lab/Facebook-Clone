@@ -189,7 +189,7 @@
 .create-post,
 .helpForm {
   width: auto;
-  height: auto;
+  min-height: 500px;
   padding: 30px;
   background: #a7efff;
 
