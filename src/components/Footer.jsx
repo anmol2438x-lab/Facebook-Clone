@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <footer className="d-flex flex-wrap justify-content-between align-items-center">
       {" "}
       <div className="col-md-4 d-flex align-items-center">
         {" "}
@@ -15,7 +15,7 @@ const Footer = () => {
           </svg>{" "}
         </a>{" "}
         <span className="mb-3 mb-md-0 text-body-secondary">
-          © 2025 Company, Inc
+          © 2026 Company, Inc Λnmol.
         </span>{" "}
       </div>{" "}
       <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
@@ -28,9 +28,9 @@ const Footer = () => {
           </a>
         </li>{" "}
         <li className="ms-3">
-          <a className="text-body-secondary" href="#" aria-label="Facebook">
+          <a className="text-body-secondary" href="#" aria-label="BuzzBook">
             <svg className="bi" width="24" height="24">
-              <use xlinkHref="#facebook"></use>
+              <use xlinkHref="#BuzzBook"></use>
             </svg>
           </a>
         </li>{" "}
