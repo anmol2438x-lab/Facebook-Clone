@@ -189,7 +189,7 @@
 .create-post,
 .helpForm {
   width: auto;
-  min-height: 500px;
+height: auto;
   padding: 30px;
   background: #a7efff;
 
@@ -249,7 +249,7 @@
 .dashboard-box {
   background: #a7efff;
   padding: 20px;
-  height: auto;
+  height: 500px;
 
   box-shadow:
     6px 6px 12px rgba(0, 0, 0, 0.6),
