@@ -2,10 +2,10 @@ import { FaHome, FaUserFriends } from "react-icons/fa";
 import { FaFacebookMessenger } from "react-icons/fa6";
 import { MdAddToPhotos } from "react-icons/md";
 import { PiFilmReelFill } from "react-icons/pi";
-import { RiNotification2Fill } from "react-icons/ri";
+import { RiMenuFoldFill, RiNotification2Fill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ toggleMenu }) => {
   return (
     <header className="p-1 text-bg-dark header">
       {" "}
@@ -90,6 +90,11 @@ const Header = () => {
                 <RiNotification2Fill />
               </NavLink>
             </li>{" "}
+            <li>
+              <button className="menu-btn px-2 " onClick={toggleMenu}>
+                <RiMenuFoldFill />
+              </button>
+            </li>
           </ul>{" "}
           <form
             className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"

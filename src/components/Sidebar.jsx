@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ menuOpen }) => {
   return (
     <div
-      className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
+      className={`sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark   ${menuOpen ? "active" : ""}`}
       style={{ width: "200px" }}
     >
       <span className=" logo3d">BuzzBook</span>
@@ -63,7 +63,7 @@ const Sidebar = () => {
       <div className="mt-auto">
         <div className="d-flex align-items-center">
           <img
-            src="public\Ak img.png"
+            src="/Ak img.png"
             alt="profile"
             width="32"
             height="32"

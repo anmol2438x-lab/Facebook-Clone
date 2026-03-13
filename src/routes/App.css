@@ -2,7 +2,7 @@ html,
 body,
 #root {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -119,8 +119,10 @@ body,
   height: 100vh;
   position: sticky;
   top: 0;
+  overflow-y: auto;
   flex-shrink: 0;
   background: #1e1e2f;
+
   box-shadow:
     6px 6px 12px rgba(0, 0, 0, 0.5),
     -4px -4px 10px rgba(255, 255, 255, 0.05);
@@ -260,7 +262,7 @@ body,
 .dashboard-box {
   background: #a7efff;
   padding: 20px;
-  min-height: 80vh;
+  min-height: calc(100vh - 120px);
   box-shadow:
     6px 6px 12px rgba(0, 0, 0, 0.6),
     -4px -4px 10px rgba(255, 255, 255, 0.05);
@@ -277,7 +279,7 @@ body,
 
 .friend-container {
   width: auto;
-  min-height: 500px;
+  min-height: 80vh;
   padding: 20px;
   background: #a7efff;
 
@@ -330,7 +332,7 @@ body,
 
 .message-container {
   width: auto;
-  min-height: 500px;
+  min-height: 80vh;
   padding: 20px;
   background: #a7efff;
 
@@ -391,7 +393,7 @@ body,
 
 .notification-container {
   width: auto;
-  min-height: 500px;
+  min-height: 80vh;
   padding: 20px;
   background: #a7efff;
 
@@ -429,7 +431,7 @@ body,
 .reels-container {
 
   width: auto;
-  min-height: 500px;
+  min-height: 80vh;
   padding: 20px;
   background: #a7efff;
   box-shadow:
@@ -473,7 +475,7 @@ body,
 
 .settings-container {
   width: auto;
-  min-height: 500px;
+  min-height: 80vh;
   margin: auto;
   padding: 20px;
   background: #a7efff;
@@ -516,7 +518,7 @@ body,
 
 .saved-container {
   width: auto;
-  min-height: 500px;
+  min-height: 80vh;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -577,4 +579,104 @@ footer {
   box-shadow:
     6px 6px 12px rgba(0, 0, 0, 0.6),
     -4px -4px 10px rgba(255, 255, 255, 0.05);
+}
+
+/* MOBILE RESPONSIVE */
+/* Default (Laptop / Desktop) */
+.menu-btn {
+  display: none;
+}
+
+/* Mobile Screen */
+@media (max-width: 768px) {
+  .menu-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #fafbfb;
+    padding: 6px 12px;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+
+  .saved-card {
+    width: 90%;
+  }
+
+  .reel-card {
+    width: 100%;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px) {
+
+  .app-container {
+    flex-direction: column;
+  }
+
+  /* sidebar hidden */
+
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100vh;
+    width: 220px;
+    z-index: 2000;
+    transition: 0.3s;
+  }
+
+  /* sidebar open */
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* menu button show */
+
+  .menu-btn {
+    display: block;
+  }
+
+  /* header layout */
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* content full */
+
+  .content {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* saved post */
+
+  .saved-card {
+    width: 100%;
+  }
+
+  /* reels */
+
+  .reel-card {
+    width: 100%;
+  }
+
+  /* forms */
+
+  .settings-form {
+    width: 100%;
+  }
+
 }
