@@ -5,7 +5,7 @@ import { PiFilmReelFill } from "react-icons/pi";
 import { RiMenuFoldFill, RiNotification2Fill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 
-const Header = ({ toggleMenu }) => {
+function Header({ setMenuOpen, menuOpen }) {
   return (
     <header className="p-1 text-bg-dark header">
       {" "}
@@ -28,7 +28,7 @@ const Header = ({ toggleMenu }) => {
               <use xlinkHref="#bootstrap"></use>
             </svg>{" "}
           </a>{" "}
-          <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 d-flex justify-content-center gap-4 mb-md-0">
+          <ul className="nav col-lg-auto me-lg-auto mb-2 d-flex justify-content-center gap-4 mb-md-0">
             {" "}
             <li>
               <NavLink
@@ -91,7 +91,10 @@ const Header = ({ toggleMenu }) => {
               </NavLink>
             </li>{" "}
             <li>
-              <button className="menu-btn px-2 " onClick={toggleMenu}>
+              <button
+                className="menu-btn px-2"
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
                 <RiMenuFoldFill />
               </button>
             </li>
@@ -129,5 +132,5 @@ const Header = ({ toggleMenu }) => {
       </div>{" "}
     </header>
   );
-};
+}
 export default Header;

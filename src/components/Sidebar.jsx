@@ -1,11 +1,15 @@
+import { VscEyeClosed } from "react-icons/vsc";
 import { NavLink } from "react-router-dom";
 
-const Sidebar = ({ menuOpen }) => {
+const Sidebar = ({ menuOpen, setMenuOpen }) => {
   return (
     <div
-      className={`sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark   ${menuOpen ? "active" : ""}`}
+      className={`sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark  ${menuOpen ? "active" : ""}`}
       style={{ width: "200px" }}
     >
+      <button className="close-btn" onClick={() => setMenuOpen(false)}>
+        <VscEyeClosed />
+      </button>
       <span className=" logo3d">BuzzBook</span>
 
       <hr />
