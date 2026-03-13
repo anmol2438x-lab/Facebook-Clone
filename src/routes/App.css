@@ -1,9 +1,21 @@
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 .app-container {
   display: flex;
+  min-height: 100vh;
 }
 
 .content {
   width: 100%;
+  flex: 1;
+  min-height: 100vh;
 }
 
 .logo3d {
@@ -107,9 +119,8 @@
   height: 100vh;
   position: sticky;
   top: 0;
+  flex-shrink: 0;
   background: #1e1e2f;
-
-  /* soft shadow */
   box-shadow:
     6px 6px 12px rgba(0, 0, 0, 0.5),
     -4px -4px 10px rgba(255, 255, 255, 0.05);
@@ -189,11 +200,7 @@
 .create-post,
 .helpForm {
   width: auto;
-<<<<<<< HEAD
-  min-height: 500px;
-=======
-height: auto;
->>>>>>> eb7d870f8ea6698adea3b5ad4b14efb75ff64131
+  min-height: 80vh;
   padding: 30px;
   background: #a7efff;
 
@@ -253,8 +260,7 @@ height: auto;
 .dashboard-box {
   background: #a7efff;
   padding: 20px;
-  height: 500px;
-
+  min-height: 80vh;
   box-shadow:
     6px 6px 12px rgba(0, 0, 0, 0.6),
     -4px -4px 10px rgba(255, 255, 255, 0.05);
