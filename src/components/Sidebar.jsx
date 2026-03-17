@@ -66,14 +66,16 @@ const Sidebar = ({ menuOpen, setMenuOpen }) => {
 
       <div className="mt-auto">
         <div className="d-flex align-items-center">
-          <img
-            src="/Ak img.png"
-            alt="profile"
-            width="32"
-            height="32"
-            className="rounded-circle me-2"
-          />
-          <strong>Λnmol</strong>
+          <NavLink to="/profile" className={`name`}>
+            <img
+              src="/Ak img.png"
+              alt="profile"
+              width="32"
+              height="32"
+              className="rounded-circle me-2"
+            />
+            <strong>Λnmol</strong>
+          </NavLink>
         </div>
       </div>
     </div>

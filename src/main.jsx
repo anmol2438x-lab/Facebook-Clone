@@ -8,6 +8,7 @@ import Help from "./components/Help";
 import Messages from "./components/Messages";
 import Notifacition from "./components/Notification";
 import PostList from "./components/PostList.jsx";
+import Profile from "./components/Profile";
 import Reels from "./components/Reels";
 import Saved from "./components/Saved";
 import Settings from "./components/Settings";
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       { path: "/help", element: <Help /> },
       { path: "/saved", element: <Saved /> },
       { path: "/settings", element: <Settings /> },
+      { path: "/profile", element: <Profile /> },
     ],
   },
 ]);

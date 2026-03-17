@@ -171,6 +171,11 @@ body,
     inset -3px -3px 6px rgba(255, 255, 255, 0.1);
 }
 
+.name {
+  text-decoration: none;
+  color: white;
+}
+
 .post-card {
   margin-top: 5px;
   margin-left: 5px;
@@ -576,6 +581,145 @@ body,
   border-radius: 5px;
 }
 
+.profile-container {
+  min-height: 80vh;
+  width: auto;
+  margin: auto;
+  padding: 20px;
+
+  background: #a7efff;
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.6),
+    -4px -4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.profile-header {
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00eaff;
+}
+
+.profile-info h3 {
+  margin-bottom: 10px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.profile-stats h4 {
+  margin: 0;
+}
+
+.profile-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon {
+  position: relative;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-top: 30px;
+  background: #e5eff0;
+  text-align: center;
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.15),
+    inset -4px -4px 8px #fdffff;
+}
+
+.tooltip {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  font-size: 12px;
+  color: white;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* Hover tooltip show */
+.icon:hover .tooltip {
+  opacity: 1;
+}
+
+.linkedin .tooltip {
+  background: #0A66C2;
+  border-radius: 50px 15px;
+}
+
+.Github .tooltip {
+  background: #000001;
+  border-radius: 50px 15px;
+}
+
+.instagram .tooltip {
+  background: #E4405F;
+  border-radius: 50px 15px;
+}
+
+
+.facebook .tooltip {
+  background: #1877F2;
+  border-radius: 50px 15px;
+}
+
+.whatsapp .tooltip {
+  background: #25D366;
+  border-radius: 50px 15px;
+  color: #000;
+}
+
+.snapchat .tooltip {
+  background: #FFFC00;
+  border-radius: 50px 15px;
+  color: #000;
+}
+
+.edit-btn {
+  background: #00eaff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.share-btn {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .loaderBox {
   min-height: 400px;
   display: flex;
@@ -640,6 +784,19 @@ footer {
     font-size: 22px;
     cursor: pointer;
     margin-bottom: 5px;
+  }
+
+}
+
+@media (max-width:600px) {
+
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-stats {
+    gap: 20px;
   }
 
 }
